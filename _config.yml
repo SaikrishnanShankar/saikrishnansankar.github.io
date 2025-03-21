@@ -1,10 +1,10 @@
 # Site settings
-title:       Viraj Prabhu
-email:       virajp@gatech.edu
-author:      Viraj Prabhu
-description: "Viraj Prabhu's resume website."
+title:       Saikrishnan S
+email:       ssankar49@gatech.edu
+author:      Saikrishnan S
+description: "Saikrishnan Sankar's portfolio website."
 baseurl:     ""
-url:         "http://virajprabhu.github.io"
+url:         "http://saikrishnansankar.github.io"
 date_format: "%b %-d, %Y"
 
 # Google services
@@ -42,14 +42,14 @@ facebook_appid:
 facebook_comments_number: 10
 
 # Social icons
-github_username: virajprabhu
+github_username: SaikrishnanShankar
 bitbucket_username:
 stackoverflow_id:
-twitter_username: virprabh
+twitter_username: 
 skype_username:
 steam_nickname:
 google_plus_id:
-linkedin_username: viraj-prabhu-0a2a9435
+linkedin_username: saikrishnansankar 
 angellist_username:
 medium_id:
 bitcoin_url:
