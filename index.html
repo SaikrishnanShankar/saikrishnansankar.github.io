@@ -13,7 +13,7 @@ tags: about
     $('#more').hide();
   }
 </script>
-<img src="{{ site.baseurl }}/images/me6.jpg" alt="Viraj Prabhu" width="240"
+<img src="images/Saiki.jpg" alt="Saikrishnan Sankar" width="240"
   style="float: right; padding: 0px; border-radius: 100%;" />
 
 <div class="bio">
@@ -121,8 +121,8 @@ tags: about
   
 </div>
 <hr />
-<div class="news">
-  <h2>Currently Working on</h2>
+<!-- <div class="news">
+  <h2>News</h2>
   <br />
   <ul>
     <li>
@@ -182,8 +182,44 @@ tags: about
   </a>
 </div>
 
-<hr />
+<hr /> -->
 
+<div id="currently_working_on">
+  <h2><a name= "currently_working_on">Currently Working on</a></h2>
+  <br />
+  <table width="100%" align="center" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
+    <tbody>
+      <tr>
+        <td valign="top" width="75%">
+          <h4 style="font-weight: 500;">Improving Inference in Language Models beyond LayerSkip</h4>
+          <p class="authors"> Saikrishnan Sankar, Ajay Bhat, Aruneswari Sankar, Siddharth Shriraman</p>
+          <p class="authors">Large Language Model (LLM) inference optimization research investigating advanced techniques like layer collapse, adaptive depth selection, and neural network pruning to dynamically modulate transformer architectural complexity, minimizing computational overhead while preserving model performance integrity.</p>
+        </td>
+        <td width="25%">
+          <div class="one" style="text-align:center;">
+            <div class="two" style="opacity: 0;"></div>
+            <img src="images/LayerSkip.png" style="max-height: 150px;">
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td valign="top" width="75%">
+          <h4 style="font-weight: 500;">Multi Version Concurrency Control in RDBMS</h4>
+          <p class="authors"> Saikrishnan Sankar</p>
+          <p class="authors">Multi-Version Concurrency Control (MVCC) architecture in BuzzDB optimizes transactional throughput by leveraging versioned tuple storage and intelligent timestamp-based visibility management, eliminating concurrency bottlenecks inherent in traditional two-phase locking protocols.</p>
+        </td>
+        <td width="25%">
+          <div class="one" style="text-align:center;">
+            <div class="two" style="opacity: 0;"></div>
+            <img src="images/MVCC.png" style="max-height: 150px;">
+          </div>
+        </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<hr>
+</div>
 <div id="research">
   <h2><a name="research">Publications</a></h2>
   <br />
@@ -297,6 +333,36 @@ tags: about
       </tr>
       <tr>
         <td valign="top" width="75%">
+          <h4 style="font-weight: 500;">ARIES based Logging and Recovery in Relational Database System</h4>
+          <p class="authors"> Saikrishnan Sankar</p>
+          <p class="authors">ARIES database recovery architecture with Write-Ahead Logging (WAL) protocol and fuzzy checkpointing mechanisms, incorporating three-phase recovery (analysis, redo, undo) to ensure transaction durability and atomicity while optimizing buffer management performance.</p>
+          <a href="https://github.com/SaikrishnanShankar/Database-Systems/tree/main/ARIES%20Logging%20and%20Recovery" class="btn btn-light" role="button"
+            aria-pressed="true">Code</a>
+        </td>
+        <td width="25%">
+          <div class="one" style="text-align:center;">
+            <div class="two" style="opacity: 0;"></div>
+            <img src="images/ARIES.png" style="max-height: 150px;">
+          </div>
+        </td>
+    </tr>
+  <tr>
+    <td valign="top" width="75%">
+      <h4 style="font-weight: 500;">External Sorting from Scratch</h4>
+      <p class="authors"> Saikrishnan Sankar</p>
+      <p class="authors">An efficient external sorting algorithm that processed large datasets exceeding available memory, implementing a two-phase merge sort approach with optimized file I/O and priority queue-based merging that maintained O(n log k) complexity while minimizing disk access patterns.</p>
+      <a href="https://github.com/SaikrishnanShankar/Database-Systems/tree/main/ARIES%20Logging%20and%20Recovery" class="btn btn-light" role="button"
+        aria-pressed="true">Code</a>
+    </td>
+    <td width="25%">
+      <div class="one" style="text-align:center;">
+        <div class="two" style="opacity: 0;"></div>
+        <img src="images/External Sorting.png" style="max-height: 150px;">
+      </div>
+    </td>
+</tr>
+      <tr>
+        <td valign="top" width="75%">
           <h4 style="font-weight: 500;">
             Charting the Course of Innovation: Insights into Inventor Success Factors
           </h4>
@@ -381,66 +447,6 @@ tags: about
           </div>
         </td>
         </tr>
-      <tr>
-        <td valign="top" width="75%">
-          <h4 style="font-weight: 500;">ARIES based Logging and Recovery in Relational Database System</h4>
-          <p class="authors"> Saikrishnan Sankar</p>
-          <p class="authors">ARIES database recovery architecture with Write-Ahead Logging (WAL) protocol and fuzzy checkpointing mechanisms, incorporating three-phase recovery (analysis, redo, undo) to ensure transaction durability and atomicity while optimizing buffer management performance.</p>
-          <a href="https://github.com/SaikrishnanShankar/Database-Systems/tree/main/ARIES%20Logging%20and%20Recovery" class="btn btn-light" role="button"
-            aria-pressed="true">Code</a>
-        </td>
-        <td width="25%">
-          <div class="one" style="text-align:center;">
-            <div class="two" style="opacity: 0;"></div>
-            <img src="images/ARIES.png" style="max-height: 150px;">
-          </div>
-        </td>
-    </tr>
-    <tr>
-      <td valign="top" width="75%">
-        <h4 style="font-weight: 500;">Multi Version Concurrency Control in RDBMS</h4>
-        <p class="authors"> Saikrishnan Sankar</p>
-        <p class="authors">Multi-Version Concurrency Control (MVCC) architecture in BuzzDB optimizes transactional throughput by leveraging versioned tuple storage and intelligent timestamp-based visibility management, eliminating concurrency bottlenecks inherent in traditional two-phase locking protocols.</p>
-        <a href="https://github.com/SaikrishnanShankar/Database-Systems/tree/main/ARIES%20Logging%20and%20Recovery" class="btn btn-light" role="button"
-          aria-pressed="true">Code</a>
-      </td>
-      <td width="25%">
-        <div class="one" style="text-align:center;">
-          <div class="two" style="opacity: 0;"></div>
-          <img src="images/MVCC.png" style="max-height: 150px;">
-        </div>
-      </td>
-  </tr>
-  <tr>
-    <td valign="top" width="75%">
-      <h4 style="font-weight: 500;">External Sorting from Scratch</h4>
-      <p class="authors"> Saikrishnan Sankar</p>
-      <p class="authors">An efficient external sorting algorithm that processed large datasets exceeding available memory, implementing a two-phase merge sort approach with optimized file I/O and priority queue-based merging that maintained O(n log k) complexity while minimizing disk access patterns.</p>
-      <a href="https://github.com/SaikrishnanShankar/Database-Systems/tree/main/ARIES%20Logging%20and%20Recovery" class="btn btn-light" role="button"
-        aria-pressed="true">Code</a>
-    </td>
-    <td width="25%">
-      <div class="one" style="text-align:center;">
-        <div class="two" style="opacity: 0;"></div>
-        <img src="images/External Sorting.png" style="max-height: 150px;">
-      </div>
-    </td>
-</tr>
-<tr>
-  <td valign="top" width="75%">
-    <h4 style="font-weight: 500;">Improving Inference in Language Models beyond LayerSkip</h4>
-    <p class="authors"> Saikrishnan Sankar, Ajay Bhat, Aruneswari Sankar, Siddharth Shriraman</p>
-    <p class="authors">Large Language Model (LLM) inference optimization research investigating advanced techniques like layer collapse, adaptive depth selection, and neural network pruning to dynamically modulate transformer architectural complexity, minimizing computational overhead while preserving model performance integrity.</p>
-    <a href="/" class="btn btn-light" role="button"
-      aria-pressed="true">Report</a>
-  </td>
-  <td width="25%">
-    <div class="one" style="text-align:center;">
-      <div class="two" style="opacity: 0;"></div>
-      <img src="images/LayerSkip.png" style="max-height: 150px;">
-    </div>
-  </td>
-</tr>
     </tbody>
   </table>
 </div>
