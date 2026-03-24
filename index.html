@@ -418,6 +418,40 @@
             border-left-color: var(--accent-color);
         }
 
+        /* Metric badges */
+        .metrics {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 12px 0;
+        }
+
+        .metric-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            background: rgba(37, 99, 235, 0.08);
+            color: var(--primary-color);
+            border: 1px solid rgba(37, 99, 235, 0.2);
+            border-radius: 20px;
+            padding: 4px 12px;
+            font-size: clamp(0.75rem, 1.5vw, 0.82rem);
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .metric-badge.green {
+            background: rgba(16, 185, 129, 0.08);
+            color: #059669;
+            border-color: rgba(16, 185, 129, 0.2);
+        }
+
+        .metric-badge.amber {
+            background: rgba(245, 158, 11, 0.08);
+            color: #d97706;
+            border-color: rgba(245, 158, 11, 0.2);
+        }
+
         .project-info {
             position: relative;
             z-index: 2;
@@ -457,6 +491,20 @@
         .project-image:hover {
             transform: scale(1.05) rotate(2deg);
             box-shadow: var(--shadow-medium);
+        }
+
+        /* Placeholder image for missing assets */
+        .project-image-placeholder {
+            width: clamp(120px, 15vw, 180px);
+            height: clamp(120px, 15vw, 180px);
+            border-radius: var(--border-radius-small);
+            background: linear-gradient(135deg, #e0e7ff, #c7d2fe);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: var(--shadow-light);
+            flex-shrink: 0;
         }
 
         /* Buttons */
@@ -580,10 +628,14 @@
                 text-align: center;
             }
 
-            .project-image {
+            .project-image, .project-image-placeholder {
                 margin: 0 auto;
                 width: clamp(100px, 25vw, 150px);
                 height: clamp(100px, 25vw, 150px);
+            }
+
+            .metrics {
+                justify-content: center;
             }
 
             .experience-grid {
@@ -676,13 +728,13 @@
             <div class="profile-section">
                 <div class="bio">
                     <h1>Saikrishnan Sankar</h1>
-                    <p>I am a Graduate Research Assistant at <a href="https://www.gatech.edu/" class="uline">Georgia Institute of Technology</a>, where I work with <a href="https://www.isye.gatech.edu/users/benoit-montreuil" class="uline">Prof. Benoit Montreuil</a> on transportation logistics optimization and supply chain systems. My research focuses on stochastic durable routing algorithms and interactive visualization platforms that enhance freight transportation efficiency across metropolitan corridors.</p>
+                    <p>I am a Graduate Research Assistant at <a href="https://www.gatech.edu/" class="uline">Georgia Institute of Technology</a>, where I work with <a href="https://www.isye.gatech.edu/users/benoit-montreuil" class="uline">Prof. Benoit Montreuil</a> on transportation logistics optimization and supply chain systems. My research focuses on stochastic durable routing algorithms on large-scale TMC graphs and interactive visualization platforms that enhance freight transportation efficiency across metropolitan corridors — including a collaboration with GDOT to identify high-priority routes for connected vehicle deployment.</p>
                     
-                    <p>During the summer of 2025, I served as a Data Science Intern at <a href="https://pulllogic.com/" class="uline">Pulllogic Inc</a> in Atlanta. I worked on building agentic workflows to scrape product data from hundreds of manufacturer websites and helped redesign client dashboards into configurable applications for enterprise partners such as HD Supply.</p>
+                    <p>During the summer of 2025, I served as a Data Science Intern at <a href="https://pulllogic.com/" class="uline">Pulllogic Inc</a> in Atlanta. I built a LangChain-based agentic pipeline to extract structured product data from 800+ manufacturer websites, processing 30K+ SKUs with 90% accuracy in 4 hours. I also migrated dashboard infrastructure to Frappe, cutting per-client deployment from weeks to just 2–3 days.</p>
                     
-                    <p>Prior to Georgia Tech, I served as a Software Development Engineer II at <a href="https://www.avalara.com/" class="uline">Avalara</a>, a leading tax compliance software provider. There, I worked with technologies including C#, .NET Core, MongoDB, and AWS cloud services. One of my key contributions was the development of "Extractor Studio," an ETL pipeline solution designed to streamline data transformation for enterprise clients across various e-commerce and marketplace platforms.</p>
+                    <p>Prior to Georgia Tech, I served as a Software Development Engineer II at <a href="https://www.avalara.com/" class="uline">Avalara</a>, a leading tax compliance software provider. I led development of "Extractor Studio," a low-code/no-code ETL platform that cut end-to-end deployment time by 80% and processed 1M+ transactions. I also introduced BDD integration tests and drove automation coverage to 80% using Playwright.</p>
                     
-                    <p>Currently pursuing my Master's in Computer Science at Georgia Tech, I'm expanding my expertise in Deep Learning, Advanced Database Systems, and Data & Visual Analytics. I'm particularly interested in how thoughtfully designed technological systems can transform industries and create meaningful impact.</p>
+                    <p>Currently pursuing my Master's in Computer Science at Georgia Tech (GPA: 4.0/4.0), I'm expanding my expertise in Deep Learning, Advanced Database Systems, and Data & Visual Analytics. I'm particularly interested in how thoughtfully designed AI systems can transform industries — from multimodal reasoning to inference optimization to real-time logistics.</p>
                     
                     <p>Outside of my academic and professional pursuits, I enjoy playing cricket, reading books, watching movies, and following college football.</p>
                 </div>
@@ -697,19 +749,24 @@
             <h2>Experience</h2>
             <div class="experience-grid">
                 <div class="experience-item">
-                    <img src="images/Sri_Sivasubramaniya_Nadar_College_of_Engineering.png" alt="SSN College of Engineering">
-                    <div class="experience-title">B.E. Computer Science</div>
-                    <div class="experience-date">2018-2022</div>
-                </div>
-                <div class="experience-item">
                     <img src="images/gt.jpg" alt="Georgia Institute of Technology">
                     <div class="experience-title">M.S. Computer Science</div>
-                    <div class="experience-date">2024-current</div>
+                    <div class="experience-date">Aug 2024 – Present</div>
+                </div>
+                <div class="experience-item">
+                    <img src="images/gt.jpg" alt="Georgia Tech Research">
+                    <div class="experience-title">Graduate Research Assistant</div>
+                    <div class="experience-date">Dec 2024 – Present</div>
+                </div>
+                <div class="experience-item">
+                    <img src="images/Pulllogic.png" alt="Pulllogic">
+                    <div class="experience-title">Data Science Intern</div>
+                    <div class="experience-date">Summer 2025</div>
                 </div>
                 <div class="experience-item">
                     <img src="images/Avalara.png" alt="Avalara">
                     <div class="experience-title">Software Engineer II</div>
-                    <div class="experience-date">2022-2024</div>
+                    <div class="experience-date">Feb 2022 – Jul 2024</div>
                 </div>
                 <div class="experience-item">
                     <img src="images/ViscusInfotechLtd.jpeg" alt="Viscus Infotech">
@@ -717,14 +774,9 @@
                     <div class="experience-date">Fall 2021</div>
                 </div>
                 <div class="experience-item">
-                    <img src="images/gt.jpg" alt="Georgia Tech Research">
-                    <div class="experience-title">Graduate Research Assistant</div>
-                    <div class="experience-date">2024-current</div>
-                </div>
-                <div class="experience-item">
-                    <img src="images/Pulllogic.png" alt="Pulllogic">
-                    <div class="experience-title">Data Science Intern</div>
-                    <div class="experience-date">Summer 2025</div>
+                    <img src="images/Sri_Sivasubramaniya_Nadar_College_of_Engineering.png" alt="SSN College of Engineering">
+                    <div class="experience-title">B.E. Computer Science</div>
+                    <div class="experience-date">2018 – 2022</div>
                 </div>
             </div>
         </div>
@@ -735,21 +787,21 @@
         <div class="container">
             <h2 class="section-title">Currently Working On</h2>
             <div class="project-grid">
+
                 <div class="project-card">
                     <div class="project-info">
-                        <h4>VLM Expert : Mixture of Experts for Multimodal Reasoning</h4>
-                        <p class="authors">Saikrishnan Sankar, Mohit Talreja</p>
-                        <p class="project-description">Building a Mixture of Experts using LLaVA-Reasoner, Qwen2.5-Omini & AssistGPT for effective multimodal reasoning.</p>
+                        <h4>GDOT Freight Route Analysis &amp; Connected Vehicle Deployment</h4>
+                        <p class="authors">Georgia Institute of Technology – Physical Internet Center · Dec 2024 – Present</p>
+                        <p class="project-description">Collaborating with the Georgia Department of Transportation (GDOT) to evaluate 1,044 freight routes across a 12K-node / 19K-edge TMC graph, modeling travel-time reliability with 15-minute granularity. Built FastAPI + React dashboards to surface 100 high-priority corridors for connected vehicle (CV) deployment across 50 Georgia hubs.</p>
+                        <div class="metrics">
+                            <span class="metric-badge green">85% search-space reduction</span>
+                            <span class="metric-badge">3 min → 20 sec query latency</span>
+                            <span class="metric-badge amber">1,044 routes evaluated</span>
+                        </div>
                     </div>
-                    <img src="images/MOE.png" alt="MOE" class="project-image">
-                </div>
-                <div class="project-card">
-                    <div class="project-info">
-                        <h4>Bitonic Sort using CUDA Programming</h4>
-                        <p class="authors">Saikrishnan Sankar</p>
-                        <p class="project-description">Implement sorting using CUDA programming. TC : O(logn)(logn)</p>
-                    </div>
-                    <img src="images/Bitonic Sort.png" alt="Bitonic" class="project-image">
+                    <img src="images/GDOT.png" alt="GDOT" class="project-image">
+                    <!-- ⚠️ MISSING IMAGE: Add images/GDOT.png — a screenshot of the dashboard or GDOT map viz -->
+                    <!-- <div class="project-image-placeholder">🗺️</div> -->
                 </div>
             </div>
         </div>
@@ -763,6 +815,11 @@
                 <h4 class="publication-title">SOMPS-Net: Attention Based Social Graph Framework for Early Detection of Fake Health News</h4>
                 <p class="publication-venue">THE 19TH AUSTRALASIAN DATA MINING CONFERENCE 2021 (AUSDM'21)</p>
                 <p class="authors">Prasannakumaran Dhanasekaran, Harish Srinivasan, Saikrishnan Sankar, S. Sowmiya Sree, I. Gayathri Devi & Vineeth Vijayaraghavan</p>
+                <div class="metrics">
+                    <span class="metric-badge green">+27.36% over prior SOTA</span>
+                    <span class="metric-badge">~80% F1 within 8 hrs</span>
+                    <span class="metric-badge amber">Early Detection</span>
+                </div>
                 <div style="margin-top: 20px;">
                     <a class="btn btn-light" href="https://arxiv.org/pdf/2111.11272">Paper</a>
                     <a href="https://zenodo.org/records/3606757" class="btn btn-light">Data</a>
@@ -774,6 +831,11 @@
                 <h4 class="publication-title">Durable Freight Routing in Hyperconnected Logistic Networks</h4>
                 <p class="publication-venue">INTERNATIONAL PHYSICAL INTERNET CONFERENCE 2025 (IPIC 2025)</p>
                 <p class="authors">Praveen Muthukrishnan, Saikrishnan Sankar, Benoit Montreuil, Chris Gaffaney</p>
+                <div class="metrics">
+                    <span class="metric-badge green">85% search-space reduction</span>
+                    <span class="metric-badge">3 min → 20 sec latency</span>
+                    <span class="metric-badge amber">1.5K freight routes evaluated</span>
+                </div>
                 <div style="margin-top: 20px;">
                     <a class="btn btn-light" href="https://arxiv.org/pdf/2111.11272">Paper</a>
                 </div>
@@ -787,11 +849,56 @@
         <div class="container">
             <h2 class="section-title">Projects</h2>
             <div class="project-grid">
+
+                <!-- Fall 2025: VLM Experts -->
+                <div class="project-card">
+                    <div class="project-info">
+                        <h4>VLM Experts – Mixture of Experts over Frozen Vision-Language Models</h4>
+                        <p class="authors">Saikrishnan Sankar, Mohit Talreja · Fall 2025</p>
+                        <p class="project-description">Developed a Mixture-of-Experts architecture over frozen VLMs (Qwen, LLaVA, IDEFICS), using an MLP-based router to select top-k experts and attention-based fusion to combine expert outputs for VQA and multimodal reasoning tasks. Cached embeddings in PACE (in-memory + disk) for selective expert activation.</p>
+                        <div class="metrics">
+                            <span class="metric-badge green">96% accuracy vs 90% baseline</span>
+                            <span class="metric-badge">33% inference time reduction</span>
+                            <span class="metric-badge amber">+5% over baseline</span>
+                        </div>
+                    </div>
+                    <img src="images/VLM MOE.png" alt="Mixture of Experts" class="project-image">
+                    <!-- ⚠️ MISSING IMAGE: Add images/VLM_Experts.png -->
+                    <!-- <div class="project-image-placeholder">🤖</div> -->
+                </div>
+
+                <!-- Fall 2025: Offline GAIL -->
+                <div class="project-card">
+                    <div class="project-info">
+                        <h4>Offline Pretrained Generative Adversarial Imitation Learning (GAIL)</h4>
+                        <p class="authors">Saikrishnan Sankar · Fall 2025</p>
+                        <p class="project-description">Reimplemented and extended GAIL with a 3-stage offline pretraining pipeline: behavioral cloning to initialize the policy near expert behavior, discriminator pretraining on expert data, and adversarial fine-tuning for policy refinement. Evaluated across CartPole, Acrobot, and MountainCar environments.</p>
+                        <div class="metrics">
+                            <span class="metric-badge green">Up to 6.9% performance improvement</span>
+                            <span class="metric-badge">93% variance reduction</span>
+                            <span class="metric-badge amber">3 RL environments</span>
+                        </div>
+                        <div style="margin-top: 15px;">
+                            <!-- <a href="https://arunasankar01.github.io/ml-7641-proj/" class="btn btn-light">Report</a> -->
+                            <a href="https://github.gatech.edu/ssankar49/GAIL" class="btn btn-light">Code</a>
+                            <a href="https://www.youtube.com/watch?v=d8t3eEb9bas" class="btn btn-light">Video</a>
+                        </div>
+                    </div>
+                    <img src="images/OP-GAIL.png" alt="OP-GAIL" class="project-image">
+                    <!-- ⚠️ MISSING IMAGE: Add images/GAIL.png -->
+                </div>
+
+                <!-- Spring 2025: LayerSkip -->
                 <div class="project-card">
                     <div class="project-info">
                         <h4>Improving Inference in Language Models beyond LayerSkip</h4>
-                        <p class="authors">Saikrishnan Sankar, Ajay Bhat, Aruneswari Sankar, Siddharth Shriraman</p>
-                        <p class="project-description">Optimized Llama-2 7B inference with LayerSkip, Draft & Verify, and Layer Collapse, enabling 30-layer skipping for an 8% speedup while maintaining model quality.</p>
+                        <p class="authors">Saikrishnan Sankar, Ajay Bhat, Aruneswari Sankar, Siddharth Shriraman · Spring 2025</p>
+                        <p class="project-description">Formulated a modular LLM inference pipeline combining LayerSkip, Draft & Verify, and LayerCollapse for Llama-2 7B, using Bayesian optimization for layer selection and self-speculative decoding. Enables up to 30-layer skipping while maintaining model quality.</p>
+                        <div class="metrics">
+                            <span class="metric-badge green">1.59× inference speedup</span>
+                            <span class="metric-badge">Improved ROUGE-2 scores</span>
+                            <span class="metric-badge amber">Llama-2 7B</span>
+                        </div>
                         <div style="margin-top: 15px;">
                             <a href="https://github.com/SaikrishnanShankar/CS7643-Deep-Learning-Project" class="btn btn-light">Code</a>
                         </div>
@@ -799,11 +906,17 @@
                     <img src="images/LayerSkip.png" alt="LayerSkip" class="project-image">
                 </div>
 
+                <!-- Spring 2025: MVCC -->
                 <div class="project-card">
                     <div class="project-info">
                         <h4>Multi Version Concurrency Control in RDBMS</h4>
-                        <p class="authors">Saikrishnan Sankar, Aruneswari Sankar</p>
-                        <p class="project-description">Implemented Multi Version Concurrency Control with snapshot isolation for lock-free concurrent reads, validated against traditional 2 Phase Locking via performance benchmarks.</p>
+                        <p class="authors">Saikrishnan Sankar, Aruneswari Sankar · Spring 2025</p>
+                        <p class="project-description">Extended BuzzDB storage engine with MVCC using append-only versioning and TID-based version chains, implementing MVTO visibility validation across buffer manager and transaction manager. Validated against traditional 2-Phase Locking via comprehensive performance benchmarks.</p>
+                        <div class="metrics">
+                            <span class="metric-badge green">3× throughput on read-heavy workloads</span>
+                            <span class="metric-badge">45K vs 15K txns/sec</span>
+                            <span class="metric-badge amber">Snapshot isolation maintained</span>
+                        </div>
                         <div style="margin-top: 15px;">
                             <a href="https://github.gatech.edu/ssankar49/MVCC_in_BuzzDB/blob/main/ADB%20final%20Project%20Report.pdf" class="btn btn-light">Report</a>
                             <a href="https://github.gatech.edu/ssankar49/MVCC_in_BuzzDB/" class="btn btn-light">Code</a>
@@ -814,9 +927,30 @@
 
                 <div class="project-card">
                     <div class="project-info">
-                        <h4>Continual Learning with Multimodal concepts</h4>
-                        <p class="authors">Saikrishnan Sankar, Sri Siddharth Prakash, Ajay Bhat, Vimalan K Mannivannan, Aruneswari Sankar</p>
-                        <p class="project-description">A continual learning framework using image encoders (ViT, CLIP) and language encoders (BERT) to generate multi-modal embeddings for skin cancer classification and model interpretability.</p>
+                        <h4>Bitonic Sort using CUDA Programming</h4>
+                        <p class="authors">Saikrishnan Sankar · Ongoing</p>
+                        <p class="project-description">Implementing a parallel bitonic sort on GPU using CUDA, achieving O(log²n) time complexity via concurrent comparator networks across thread blocks.</p>
+                        <div class="metrics">
+                            <span class="metric-badge amber">O(log²n) complexity</span>
+                            <span class="metric-badge">CUDA parallel sort</span>
+                        </div>
+                    </div>
+                    <img src="images/Bitonic Sort.png" alt="Bitonic Sort" class="project-image">
+                    <!-- ⚠️ MISSING IMAGE: Add images/Bitonic Sort.png (already referenced) -->
+                    <!-- <div class="project-image-placeholder">⚡</div> -->
+                </div>
+
+                <!-- Fall 2024: Continual Learning -->
+                <div class="project-card">
+                    <div class="project-info">
+                        <h4>Continual Learning with Multimodal Concepts</h4>
+                        <p class="authors">Saikrishnan Sankar, Sri Siddharth Prakash, Ajay Bhat, Vimalan K Mannivannan, Aruneswari Sankar · Fall 2024</p>
+                        <p class="project-description">Proposed a Concept-Guided Visual Classifier (CGVC) using CLIP-based image-text embeddings and submodular optimization for automated concept selection. Enables interpretable multimodal skin cancer classification with continual learning via concept bottlenecks and exemplar-based training.</p>
+                        <div class="metrics">
+                            <span class="metric-badge green">88% accuracy on HAM10000</span>
+                            <span class="metric-badge">15% less catastrophic forgetting</span>
+                            <span class="metric-badge amber">ViT + CLIP + BERT</span>
+                        </div>
                         <div style="margin-top: 15px;">
                             <a href="https://arunasankar01.github.io/ml-7641-proj/" class="btn btn-light">Report</a>
                             <a href="https://github.gatech.edu/ssankar49/Continual-Learning-with-Multimodal-Concepts" class="btn btn-light">Code</a>
@@ -825,24 +959,12 @@
                     </div>
                     <img src="images/fabrik.png" alt="Continual Learning" class="project-image">
                 </div>
-                
-                <div class="project-card">
-                    <div class="project-info">
-                        <h4>CLERS-Net: A Deep learning ensemble model for real-time stock price forecasting</h4>
-                        <p class="authors">Saikrishnan Sankar, Kiruthika Janakiraman, Madhumithaa S, Saritha M</p>
-                        <p class="project-description">CLERS-Net is a deep learning ensemble model integrating CNN, LSTM, and Random Forest Regressor with sentiment analysis using the Flair NLP model to predict real-time stock prices for NIFTY-50 companies based on historical stock data and news sentiments.</p>
-                        <div style="margin-top: 15px;">
-                            <a href="https://github.com/SaikrishnanShankar/FYP-Stock-Price-Prediction/blob/main/CLERS-NET.pdf" class="btn btn-light">Report</a>
-                            <a href="https://github.com/SaikrishnanShankar/FYP-Stock-Price-Prediction" class="btn btn-light">Code</a>
-                        </div>
-                    </div>
-                    <img src="images/CLERS-Net.png" alt="CLERS-Net" class="project-image">
-                </div>
 
+                <!-- Fall 2024: ReadVerse -->
                 <div class="project-card">
                     <div class="project-info">
                         <h4>ReadVerse: The Personal Book Recommendation System</h4>
-                        <p class="authors">Saikrishnan Sankar, Ajay Bhat, Akash, Shivam Choudhary, Sanjay Patnala, M S Vignesh</p>
+                        <p class="authors">Saikrishnan Sankar, Ajay Bhat, Akash, Shivam Choudhary, Sanjay Patnala, M S Vignesh · Fall 2024</p>
                         <p class="project-description">A book recommendation engine built using Matrix Factorization and Neural Collaborative Filtering, processing over 2M records to generate user-centric suggestions with an interactive visualization interface.</p>
                         <div style="margin-top: 15px;">
                             <a href="https://github.gatech.edu/ssankar49/ReadVerse/blob/main/6242%20Final%20Report.pdf" class="btn btn-light">Report</a>
@@ -853,34 +975,11 @@
                     <img src="images/Book Recommendation system1.png" alt="Book Recommendation System" class="project-image">
                 </div>
 
-                <div class="project-card">
-                    <div class="project-info">
-                        <h4>ARIES based Logging and Recovery in Relational Database System</h4>
-                        <p class="authors">Saikrishnan Sankar</p>
-                        <p class="project-description">ARIES database recovery architecture with Write-Ahead Logging (WAL) protocol and fuzzy checkpointing mechanisms, incorporating three-phase recovery (analysis, redo, undo) to ensure transaction durability and atomicity while optimizing buffer management performance.</p>
-                        <div style="margin-top: 15px;">
-                            <a href="https://github.com/SaikrishnanShankar/Database-Systems/tree/main/ARIES%20Logging%20and%20Recovery" class="btn btn-light">Code</a>
-                        </div>
-                    </div>
-                    <img src="images/ARIES.png" alt="ARIES Recovery" class="project-image">
-                </div>
-
-                <div class="project-card">
-                    <div class="project-info">
-                        <h4>External Sorting from Scratch</h4>
-                        <p class="authors">Saikrishnan Sankar</p>
-                        <p class="project-description">An efficient external sorting algorithm that processed large datasets exceeding available memory, implementing a two-phase merge sort approach with optimized file I/O and priority queue-based merging that maintained O(n log k) complexity while minimizing disk access patterns.</p>
-                        <div style="margin-top: 15px;">
-                            <a href="https://github.com/SaikrishnanShankar/Database-Systems/tree/main/External%20Sorting" class="btn btn-light">Code</a>
-                        </div>
-                    </div>
-                    <img src="images/External Sorting.png" alt="External Sorting" class="project-image">
-                </div>
-
+                <!-- Fall 2024: DVP Innovators -->
                 <div class="project-card">
                     <div class="project-info">
                         <h4>Charting the Course of Innovation: Insights into Inventor Success Factors</h4>
-                        <p class="authors">Saikrishnan Sankar, Ajay Bhat, Harita Patel, Prisha Sheth</p>
+                        <p class="authors">Saikrishnan Sankar, Ajay Bhat, Harita Patel, Prisha Sheth · Fall 2024</p>
                         <p class="project-description">A dynamic, scrolly-telling interface with a martini-glass narrative, guiding parents across the USA through factors influencing their children's journey to becoming inventors.</p>
                         <div style="margin-top: 15px;">
                             <a href="https://pranavsreedhar123.github.io/dvp-project-final/" class="btn btn-light">Demo</a>
@@ -889,10 +988,51 @@
                     <img src="images/DVP Innovators.png" alt="DVP Innovators" class="project-image">
                 </div>
 
+                <!-- Fall 2024: ARIES -->
+                <div class="project-card">
+                    <div class="project-info">
+                        <h4>ARIES based Logging and Recovery in Relational Database System</h4>
+                        <p class="authors">Saikrishnan Sankar · Fall 2024</p>
+                        <p class="project-description">ARIES database recovery architecture with Write-Ahead Logging (WAL) protocol and fuzzy checkpointing mechanisms, incorporating three-phase recovery (analysis, redo, undo) to ensure transaction durability and atomicity while optimizing buffer management performance.</p>
+                        <div style="margin-top: 15px;">
+                            <a href="https://github.com/SaikrishnanShankar/Database-Systems/tree/main/ARIES%20Logging%20and%20Recovery" class="btn btn-light">Code</a>
+                        </div>
+                    </div>
+                    <img src="images/ARIES.png" alt="ARIES Recovery" class="project-image">
+                </div>
+
+                <!-- Fall 2024: External Sorting -->
+                <div class="project-card">
+                    <div class="project-info">
+                        <h4>External Sorting from Scratch</h4>
+                        <p class="authors">Saikrishnan Sankar · Fall 2024</p>
+                        <p class="project-description">An efficient external sorting algorithm that processed large datasets exceeding available memory, implementing a two-phase merge sort approach with optimized file I/O and priority queue-based merging that maintained O(n log k) complexity while minimizing disk access patterns.</p>
+                        <div style="margin-top: 15px;">
+                            <a href="https://github.com/SaikrishnanShankar/Database-Systems/tree/main/External%20Sorting" class="btn btn-light">Code</a>
+                        </div>
+                    </div>
+                    <img src="images/External Sorting.png" alt="External Sorting" class="project-image">
+                </div>
+
+                <!-- 2022: CLERS-Net (Undergrad thesis) -->
+                <div class="project-card">
+                    <div class="project-info">
+                        <h4>CLERS-Net: Deep Learning Ensemble for Real-time Stock Price Forecasting</h4>
+                        <p class="authors">Saikrishnan Sankar, Kiruthika Janakiraman, Madhumithaa S, Saritha M · 2022</p>
+                        <p class="project-description">A deep learning ensemble integrating CNN, LSTM, and Random Forest Regressor with sentiment analysis using the Flair NLP model to predict real-time stock prices for NIFTY-50 companies based on historical data and news sentiments.</p>
+                        <div style="margin-top: 15px;">
+                            <a href="https://github.com/SaikrishnanShankar/FYP-Stock-Price-Prediction/blob/main/CLERS-NET.pdf" class="btn btn-light">Report</a>
+                            <a href="https://github.com/SaikrishnanShankar/FYP-Stock-Price-Prediction" class="btn btn-light">Code</a>
+                        </div>
+                    </div>
+                    <img src="images/CLERS-Net.png" alt="CLERS-Net" class="project-image">
+                </div>
+
+                <!-- 2021: Flight Delay -->
                 <div class="project-card">
                     <div class="project-info">
                         <h4>Flight Delay Prediction</h4>
-                        <p class="authors">Saikrishnan Sankar</p>
+                        <p class="authors">Saikrishnan Sankar · 2021</p>
                         <p class="project-description">A two-stage model with a Random Forest Classifier for flight delay prediction and a Random Forest Regressor for delay estimation, integrating structured flight and JSON weather data while applying SMOTE and Random Undersampling for class imbalance correction.</p>
                         <div style="margin-top: 15px;">
                             <a href="https://github.com/SaikrishnanShankar/Flight-Delay-Pediction/blob/master/Flight_delay_Prediction_Project_Report.pdf" class="btn btn-light">Report</a>
@@ -902,10 +1042,11 @@
                     <img src="images/Flight Delay Predictin.png" alt="Flight Delay Prediction" class="project-image">
                 </div>
 
+                <!-- 2021: No Ball Detection -->
                 <div class="project-card">
                     <div class="project-info">
                         <h4>No Ball Detection</h4>
-                        <p class="authors">Saikrishnan Sankar</p>
+                        <p class="authors">Saikrishnan Sankar · 2021</p>
                         <p class="project-description">A deep learning-based computer vision model for automated adjudication of delivery legality from bowler action images, leveraging a custom dataset with strategic augmentation to mitigate right-arm bowler bias and enhance generalization.</p>
                         <div style="margin-top: 15px;">
                             <a href="https://github.com/SaikrishnanShankar/No-Ball-Detection/blob/master/No_ball_Detection.pdf" class="btn btn-light">Report</a>
@@ -915,10 +1056,11 @@
                     <img src="images/No Ball Detection.png" alt="No Ball Detection" class="project-image">
                 </div>
 
+                <!-- 2021: IPL Score -->
                 <div class="project-card">
                     <div class="project-info">
                         <h4>Real-time Cricket Score Prediction (Indian Premier League)</h4>
-                        <p class="authors">Saikrishnan Sankar</p>
+                        <p class="authors">Saikrishnan Sankar · 2021</p>
                         <p class="project-description">A multivariate regression ensemble combining SVM, XGBoost, and Lasso regressors to forecast IPL cricket score trajectories through feature engineering of historical match variables and real-time predictive visualization.</p>
                         <div style="margin-top: 15px;">
                             <a href="https://github.com/SaikrishnanShankar/IPL-Score-Prediction" class="btn btn-light">Code</a>
@@ -927,10 +1069,11 @@
                     <img src="images/IPL Score Prediction.png" alt="IPL Score Prediction" class="project-image">
                 </div>
 
+                <!-- 2021: AI Path Network -->
                 <div class="project-card">
                     <div class="project-info">
                         <h4>AI Path Network for Obstacle Avoidance in Game Navigation</h4>
-                        <p class="authors">Saikrishnan Sankar</p>
+                        <p class="authors">Saikrishnan Sankar · 2021</p>
                         <p class="project-description">Implemented generalized Voronoi diagrams with convex decomposition to construct sparse, obstacle-avoiding path networks for real-time game navigation.</p>
                         <div style="margin-top: 15px;">
                             <a href="https://github.com/SaikrishnanShankar/Game-Development/tree/main/HW1" class="btn btn-light">Code</a>
@@ -938,6 +1081,7 @@
                     </div>
                     <img src="images/Path Navigation.png" alt="Path Navigation" class="project-image">
                 </div>
+
             </div>
         </div>
     </section>
@@ -1057,7 +1201,6 @@
         let ticking = false;
         
         function updateOnScroll() {
-            // Your scroll-based animations here
             ticking = false;
         }
         
