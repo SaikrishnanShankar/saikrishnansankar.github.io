@@ -452,6 +452,45 @@
             border-color: rgba(245, 158, 11, 0.2);
         }
 
+        /* Tech stack tags */
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin: 8px 0 14px;
+        }
+
+        .tech-tag {
+            display: inline-flex;
+            align-items: center;
+            background: rgba(15, 23, 42, 0.06);
+            color: #374151;
+            border: 1px solid rgba(15, 23, 42, 0.15);
+            border-radius: 6px;
+            padding: 2px 10px;
+            font-size: 0.74rem;
+            font-weight: 500;
+            font-family: 'SF Mono', 'Monaco', 'Cascadia Code', 'Courier New', monospace;
+            letter-spacing: 0.02em;
+        }
+
+        /* New badge for recent projects */
+        .project-new-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
+            color: white;
+            border-radius: 20px;
+            padding: 2px 10px;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-left: 10px;
+            vertical-align: middle;
+            position: relative;
+            top: -2px;
+        }
+
         .project-info {
             position: relative;
             z-index: 2;
@@ -849,6 +888,82 @@
         <div class="container">
             <h2 class="section-title">Projects</h2>
             <div class="project-grid">
+
+                <!-- April 2026: LLM RAG Server -->
+                <div class="project-card">
+                    <div class="project-info">
+                        <h4>LLM RAG Server <span class="project-new-badge">New</span></h4>
+                        <p class="authors">Saikrishnan Sankar · April 2026</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">PostgreSQL + pgvector</span>
+                            <span class="tech-tag">MLflow</span>
+                            <span class="tech-tag">Prometheus</span>
+                            <span class="tech-tag">Grafana</span>
+                        </div>
+                        <p class="project-description">A production-grade Retrieval-Augmented Generation (RAG) system with an intelligent query pipeline that classifies queries, searches a vector database with HNSW indexing, reranks results, and generates answers with source attribution. Features RAGAS-based evaluation across 3 chunking strategies, async SSE streaming, and a full observability stack with MLflow experiment tracking.</p>
+                        <div class="metrics">
+                            <span class="metric-badge green">Production-grade RAG pipeline</span>
+                            <span class="metric-badge">3 chunking strategies evaluated</span>
+                            <span class="metric-badge amber">MLflow + Prometheus + Grafana</span>
+                        </div>
+                        <div style="margin-top: 15px;">
+                            <a href="https://github.com/SaikrishnanShankar/llm-rag-server" class="btn btn-light">Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- April 2026: Distributed Job Scheduler -->
+                <div class="project-card">
+                    <div class="project-info">
+                        <h4>Distributed Job Scheduler <span class="project-new-badge">New</span></h4>
+                        <p class="authors">Saikrishnan Sankar · April 2026</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Go</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Redis</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">Kubernetes</span>
+                            <span class="tech-tag">Terraform</span>
+                        </div>
+                        <p class="project-description">A production-grade distributed job scheduling system built for Kubernetes deployment, featuring priority-based queuing with Redis sorted sets, configurable worker pools with horizontal auto-scaling, and exponential backoff retry logic (up to 60s). Includes a real-time React 18 dashboard with WebSocket updates and comprehensive Prometheus metrics.</p>
+                        <div class="metrics">
+                            <span class="metric-badge green">Horizontal worker auto-scaling</span>
+                            <span class="metric-badge">Priority-based Redis queuing</span>
+                            <span class="metric-badge amber">K8s + Terraform deployment</span>
+                        </div>
+                        <div style="margin-top: 15px;">
+                            <a href="https://github.com/SaikrishnanShankar/job-scheduler" class="btn btn-light">Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- April 2026: Distributed KV Store -->
+                <div class="project-card">
+                    <div class="project-info">
+                        <h4>Distributed Key-Value Store <span class="project-new-badge">New</span></h4>
+                        <p class="authors">Saikrishnan Sankar · April 2026</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Go</span>
+                            <span class="tech-tag">gRPC</span>
+                            <span class="tech-tag">REST</span>
+                            <span class="tech-tag">Prometheus</span>
+                            <span class="tech-tag">Kubernetes</span>
+                            <span class="tech-tag">Terraform</span>
+                        </div>
+                        <p class="project-description">A production-ready distributed key-value store built from scratch in Go, implementing consistent hashing with 150 virtual nodes for load balancing, leader-follower replication with async fan-out, and a SWIM-inspired gossip protocol for failure detection. Features a gRPC internal communication layer, REST HTTP/JSON gateway, and write-ahead logging for durability.</p>
+                        <div class="metrics">
+                            <span class="metric-badge green">Consistent hashing · 150 virtual nodes</span>
+                            <span class="metric-badge">SWIM gossip failure detection</span>
+                            <span class="metric-badge amber">WAL + leader-follower replication</span>
+                        </div>
+                        <div style="margin-top: 15px;">
+                            <a href="https://github.com/SaikrishnanShankar/distributed-kv-store" class="btn btn-light">Code</a>
+                        </div>
+                    </div>
+                </div>
 
                 <!-- Fall 2025: VLM Experts -->
                 <div class="project-card">
